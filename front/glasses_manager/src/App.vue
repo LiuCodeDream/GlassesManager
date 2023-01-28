@@ -34,3 +34,9 @@
   // 用于内链 iframe 组件获取 KeepAlive
   const keepAlive = computed(() => TAB_KEEP_ALIVE && unref(showTabs));
 </script>
+<style lang="less" scoped>
+  html,body {
+    height: 100%;
+    width: 100%;
+  }
+</style>
