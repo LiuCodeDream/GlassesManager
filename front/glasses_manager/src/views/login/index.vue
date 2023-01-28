@@ -18,15 +18,15 @@
               </a-input>
             </a-form-item>
             <a-form-item name="password">
-              <a-input placeholder="请输入密码" size="large" v-model:value="loginState.password">
+              <a-input-password placeholder="请输入密码" size="large" v-model:value="loginState.password">
                 <template #prefix>
                   <LockOutlined class="login-icon" />
                 </template>
-              </a-input>
+              </a-input-password>
             </a-form-item>
             <a-form-item>
               <a-button type="primary" class="login-button" size="large" @click="onSubmit">
-                登&nbsp;&nbsp;&nbsp;&nbsp;录
+                {{t('login.login')}}
               </a-button>
             </a-form-item>
           </a-form>
@@ -40,7 +40,12 @@
 </template>
 <script setup>
   import { UserOutlined, LockOutlined } from '@ant-design/icons-vue';
-  import { onMounted, reactive, ref } from 'vue'
+  import { onMounted, reactive, ref } from 'vue';
+  import service from '@/utils/request';
+  import { message } from 'ant-design-vue';
+  import { useI18n } from 'vue-i18n';
+
+  const { t } = useI18n();
 
   // 年份
   var year = ref(0);
@@ -67,8 +72,18 @@
   var onSubmit = async () => {
     try {
       let value = await loginRef.value.validateFields();
+      await userLogin();
     } catch (error) {
       console.log('验证失败：',error); 
+    }
+  }
+
+  var userLogin = async () =>  {
+    try {
+      let response = await service.post('/asss', loginState);
+
+    } catch (error) {
+      message.error('服务错误：', error.message);
     }
   }
 
