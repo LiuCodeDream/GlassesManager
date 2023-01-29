@@ -10,8 +10,8 @@
                 晨光眼镜管理系统
               </a-typography-title>
             </a-form-item>
-            <a-form-item name="name">
-              <a-input placeholder="请输入账号" size="large" v-model:value="loginState.name">
+            <a-form-item name="account">
+              <a-input placeholder="请输入账号" size="large" v-model:value="loginState.account">
                 <template #prefix>
                   <UserOutlined class="login-icon" />
                 </template>
@@ -30,16 +30,26 @@
               </a-button>
             </a-form-item>
           </a-form>
-          <div class="login-text" style="color: rgba(0,0,0,.25)">
-            Copyright © {{year}} 翔基软件工作室 All Rights Reserved
+          <div>
+            <a-divider style="color: rgba(0,0,0,.25)">其它方式登录</a-divider>
+            <div style="text-align:center">
+              <a-button type="primary" shape="circle" style="background-color:#28C445;border: 0px" @click="onWechatClick">
+                <template #icon>
+                  <wechat-outlined style="font-size: 20px;" />
+                </template>
+              </a-button>
+            </div>
           </div>
         </div>
+        <div class="login-text copyright">
+            Copyright © {{year}} 翔基软件工作室 All Rights Reserved
+          </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-  import { UserOutlined, LockOutlined } from '@ant-design/icons-vue';
+  import { UserOutlined, LockOutlined,WechatOutlined } from '@ant-design/icons-vue';
   import { onMounted, reactive, ref } from 'vue';
   import service from '@/utils/request';
   import { message } from 'ant-design-vue';
@@ -52,7 +62,7 @@
   
   // 验证规则
   var rules = reactive({
-    'name': {
+    'account': {
       required: true,
       message: '请输入账号'
     },
@@ -63,7 +73,7 @@
   });
 
   var loginState = reactive({
-    name: '',
+    account: '',
     password: ''
   });
 
@@ -80,11 +90,15 @@
 
   var userLogin = async () =>  {
     try {
-      let response = await service.post('/asss', loginState);
+      let response = await service.post('/login', loginState);
 
     } catch (error) {
       message.error('服务错误：', error.message);
     }
+  }
+
+  var onWechatClick = async () => {
+    message.warning('该功能暂未开放，请稍后');
   }
 
   onMounted(() =>  {
@@ -112,6 +126,13 @@
     width: 100%;
     height: 100%;
     position: relative;
+  }
+  .copyright {
+    color: rgba(0,0,0,.25);
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .login {
     width: 40%;

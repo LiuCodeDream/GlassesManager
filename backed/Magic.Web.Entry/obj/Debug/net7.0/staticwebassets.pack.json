@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Captcha\\Font\\zkkht.ttf",
+      "PackagePath": "staticwebassets\\Captcha\\Font\\zkkht.ttf"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\Dto.cs.vm",
+      "PackagePath": "staticwebassets\\Template\\Dto.cs.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\IService.cs.vm",
+      "PackagePath": "staticwebassets\\Template\\IService.cs.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\Input.cs.vm",
+      "PackagePath": "staticwebassets\\Template\\Input.cs.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\Manage.js.vm",
+      "PackagePath": "staticwebassets\\Template\\Manage.js.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\Output.cs.vm",
+      "PackagePath": "staticwebassets\\Template\\Output.cs.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\Service.cs.vm",
+      "PackagePath": "staticwebassets\\Template\\Service.cs.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\addForm.vue.vm",
+      "PackagePath": "staticwebassets\\Template\\addForm.vue.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\editForm.vue.vm",
+      "PackagePath": "staticwebassets\\Template\\editForm.vue.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Template\\index.vue.vm",
+      "PackagePath": "staticwebassets\\Template\\index.vue.vm"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Avatar\\167456009080901.png",
+      "PackagePath": "staticwebassets\\Upload\\Avatar\\167456009080901.png"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Avatar\\167456254419013.png",
+      "PackagePath": "staticwebassets\\Upload\\Avatar\\167456254419013.png"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Avatar\\175614800654405.jpeg",
+      "PackagePath": "staticwebassets\\Upload\\Avatar\\175614800654405.jpeg"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Avatar\\188632919339077.png",
+      "PackagePath": "staticwebassets\\Upload\\Avatar\\188632919339077.png"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Avatar\\263006401138757.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Avatar\\263006401138757.jpg"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Document\\2022\\4\\27\\282067842687045.png",
+      "PackagePath": "staticwebassets\\Upload\\Document\\2022\\4\\27\\282067842687045.png"
+    },
+    {
+      "Id": "E:\\项目\\GlassesManager\\backed\\Magic.Web.Entry\\wwwroot\\Upload\\Document\\2022\\4\\27\\282118658961477.png",
+      "PackagePath": "staticwebassets\\Upload\\Document\\2022\\4\\27\\282118658961477.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Magic.Web.Entry.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Magic.Web.Entry.props",
+      "PackagePath": "build\\Magic.Web.Entry.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Magic.Web.Entry.props",
+      "PackagePath": "buildMultiTargeting\\Magic.Web.Entry.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Magic.Web.Entry.props",
+      "PackagePath": "buildTransitive\\Magic.Web.Entry.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

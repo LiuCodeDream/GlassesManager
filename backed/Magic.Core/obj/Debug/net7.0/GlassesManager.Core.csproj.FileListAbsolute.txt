@@ -1,0 +1,14 @@
+E:\项目\GlassesManager\backed\Magic.Core\bin\Debug\net7.0\Service\CodeGen\Dto\TableOutput.cs
+E:\项目\GlassesManager\backed\Magic.Core\bin\Debug\net7.0\Magic.Core.deps.json
+E:\项目\GlassesManager\backed\Magic.Core\bin\Debug\net7.0\Magic.Core.dll
+E:\项目\GlassesManager\backed\Magic.Core\bin\Debug\net7.0\Magic.Core.pdb
+E:\项目\GlassesManager\backed\Magic.Core\bin\Debug\net7.0\Magic.Core.xml
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\GlassesManager.Core.csproj.AssemblyReference.cache
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\GlassesManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\GlassesManager.Core.AssemblyInfoInputs.cache
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\GlassesManager.Core.AssemblyInfo.cs
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\GlassesManager.Core.csproj.CoreCompileInputs.cache
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\Magic.Core.dll
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\refint\Magic.Core.dll
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\Magic.Core.pdb
+E:\项目\GlassesManager\backed\Magic.Core\obj\Debug\net7.0\ref\Magic.Core.dll

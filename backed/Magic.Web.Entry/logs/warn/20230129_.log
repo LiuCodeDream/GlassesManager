@@ -1,0 +1,66 @@
+warn: 2023-01-29 22:47:33.8346206 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 22:47:36.6840603 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #16
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 22:47:37.1522988 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #16
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:00:41.1527533 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:00:42.2563399 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #18
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:00:42.4955638 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #18
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:05:20.6575455 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:05:21.9697125 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #9
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:05:22.1892362 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #9
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:06:52.9850124 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:06:54.1251445 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #6
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:06:54.4042900 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #6
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:16:14.7740308 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:16:16.1677267 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #19
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:16:16.4042094 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #19
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:49:15.9376042 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:49:17.2809979 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #19
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:49:17.5535801 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #19
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:51:12.9985206 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:51:14.3319141 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #18
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:51:14.5494145 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #18
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:51:53.8094801 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:51:55.2657967 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #16
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:51:55.5120313 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #16
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:55:38.0378588 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:55:39.3788535 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #4
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:55:39.6082589 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #4
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-29 23:57:49.5348703 +08:00 星期日 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-29 23:57:50.7218152 +08:00 星期日 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #6
+      Failed to determine the https port for redirect.
+warn: 2023-01-29 23:57:51.0084500 +08:00 星期日 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #6
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
+warn: 2023-01-30 00:10:08.6571331 +08:00 星期一 L System.Logging.ScheduleService[0] #1
+      Schedule hosted service preload completed, and a total of <3> schedulers are appended.
+warn: 2023-01-30 00:10:09.6477981 +08:00 星期一 L Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3] #9
+      Failed to determine the https port for redirect.
+warn: 2023-01-30 00:10:09.8807798 +08:00 星期一 L Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware[4] #9
+      Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: 'br'. Consider disabling response compression.
