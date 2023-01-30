@@ -5,7 +5,7 @@ import request from '@/utils/request';
  */
 export async function pageDictionaryData(params) {
   const res = await request.get('/system/dictionary-data/page', { params });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -16,7 +16,7 @@ export async function pageDictionaryData(params) {
  */
 export async function listDictionaryData(params) {
   const res = await request.get('/system/dictionary-data', { params });
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -27,7 +27,7 @@ export async function listDictionaryData(params) {
  */
 export async function addDictionaryData(data) {
   const res = await request.post('/system/dictionary-data', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -38,7 +38,7 @@ export async function addDictionaryData(data) {
  */
 export async function updateDictionaryData(data) {
   const res = await request.put('/system/dictionary-data', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -49,7 +49,7 @@ export async function updateDictionaryData(data) {
  */
 export async function removeDictionaryData(id) {
   const res = await request.delete('/system/dictionary-data/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -60,7 +60,7 @@ export async function removeDictionaryData(id) {
  */
 export async function removeDictionaryDataBatch(data) {
   const res = await request.delete('/system/dictionary-data/batch', { data });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

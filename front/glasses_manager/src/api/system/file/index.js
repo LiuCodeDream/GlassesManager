@@ -7,7 +7,7 @@ export async function uploadFile(file) {
   const formData = new FormData();
   formData.append('file', file);
   const res = await request.post('/file/upload', formData);
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -25,7 +25,7 @@ export async function uploadBase64File(base64, fileName) {
     formData.append('fileName', fileName);
   }
   const res = await request.post('/file/upload/base64', formData);
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -36,7 +36,7 @@ export async function uploadBase64File(base64, fileName) {
  */
 export async function pageFiles(params) {
   const res = await request.get('/file/page', { params });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -47,7 +47,7 @@ export async function pageFiles(params) {
  */
 export async function removeFile(id) {
   const res = await request.delete('/file/remove/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -60,7 +60,7 @@ export async function removeFiles(data) {
   const res = await request.delete('/file/remove/batch', {
     data
   });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

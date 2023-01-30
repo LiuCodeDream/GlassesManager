@@ -8,7 +8,7 @@ export async function getPieceList(params) {
     'https://cdn.eleadmin.com/20200610/document.json',
     { params }
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -22,7 +22,7 @@ export async function getArchiveList(params) {
     'https://cdn.eleadmin.com/20200610/archive.json',
     { params }
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));

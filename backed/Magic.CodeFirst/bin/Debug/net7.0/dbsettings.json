@@ -1,12 +1,12 @@
 {
   "ConnectionStrings": {
     "DefaultDbNumber": "0",
-    "DefaultDbType": "Sqlite",
-   "DefaultDbString": "Data Source=./Magic.db",
+    // "DefaultDbType": "Sqlite",
+    //"DefaultDbString": "Data Source=./Magic.db",
     //"DefaultDbType": "SqlServer",
     //"DefaultDbString": "Server=.;Database=MagicCodeFirst;User=sa;Password=123456;MultipleActiveResultSets=True;",
-    //"DefaultDbType": "MySql",
-    //"DefaultDbString": "Data Source=localhost;Database=magic;User ID=root;Password=123456;pooling=true;port=3306;sslmode=none;CharSet=utf8;Convert Zero Datetime=True;Allow Zero Datetime=True;",
+    "DefaultDbType": "MySql",
+    "DefaultDbString": "Data Source=127.0.0.1;Database=glasses_manager;User ID=root;Password=root_123;pooling=true;port=3306;",
     "DbConfigs": [
       {
         "DbNumber": "1",

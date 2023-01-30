@@ -8,7 +8,7 @@ export async function getAllClasses(params) {
     'https://cdn.eleadmin.com/20200610/classes.json',
     { params }
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));

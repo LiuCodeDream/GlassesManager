@@ -5,7 +5,7 @@ import request from '@/utils/request';
  */
 export async function pageRoles(params) {
   const res = await request.get('/system/role/page', { params });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -18,7 +18,7 @@ export async function listRoles(params) {
   const res = await request.get('/system/role', {
     params
   });
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -29,7 +29,7 @@ export async function listRoles(params) {
  */
 export async function addRole(data) {
   const res = await request.post('/system/role', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -40,7 +40,7 @@ export async function addRole(data) {
  */
 export async function updateRole(data) {
   const res = await request.put('/system/role', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -51,7 +51,7 @@ export async function updateRole(data) {
  */
 export async function removeRole(id) {
   const res = await request.delete('/system/role/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -64,7 +64,7 @@ export async function removeRoles(data) {
   const res = await request.delete('/system/role/batch', {
     data
   });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -75,7 +75,7 @@ export async function removeRoles(data) {
  */
 export async function listRoleMenus(roleId) {
   const res = await request.get('/system/role-menu/' + roleId);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -86,7 +86,7 @@ export async function listRoleMenus(roleId) {
  */
 export async function updateRoleMenus(roleId, data) {
   const res = await request.put('/system/role-menu/' + roleId, data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

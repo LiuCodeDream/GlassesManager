@@ -1,0 +1,24 @@
+info: 2023-01-30 23:50:34.2203480 +08:00 星期一 L System.Logging.StringLogging[0] #18
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_ex` WHERE ( `ExceptionTime` < (DATE_ADD('2023-01-30 23:50:34.220' , INTERVAL -7 Day)) ) 
+info: 2023-01-30 23:50:34.2216917 +08:00 星期一 L System.Logging.StringLogging[0] #22
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_op` WHERE ( `OpTime` < (DATE_ADD('2023-01-30 23:50:34.221' , INTERVAL -7 Day)) ) 
+info: 2023-01-30 23:50:34.2251602 +08:00 星期一 L System.Logging.StringLogging[0] #25
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_vis` WHERE ( `VisTime` < (DATE_ADD('2023-01-30 23:50:34.224' , INTERVAL -7 Day)) ) 
+info: 2023-01-30 23:50:34.2956641 +08:00 星期一 L System.Logging.StringLogging[0] #30
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_vis` WHERE ( `VisTime` < (DATE_ADD('2023-01-30 23:50:34.295' , INTERVAL -7 Day)) ) 
+info: 2023-01-30 23:50:34.2975740 +08:00 星期一 L System.Logging.StringLogging[0] #9
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_op` WHERE ( `OpTime` < (DATE_ADD('2023-01-30 23:50:34.297' , INTERVAL -7 Day)) ) 
+info: 2023-01-30 23:50:34.2975740 +08:00 星期一 L System.Logging.StringLogging[0] #23
+      DB:0, Sql:
+      
+       DELETE FROM `sys_log_ex` WHERE ( `ExceptionTime` < (DATE_ADD('2023-01-30 23:50:34.297' , INTERVAL -7 Day)) ) 

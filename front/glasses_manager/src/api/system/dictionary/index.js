@@ -7,7 +7,7 @@ export async function listDictionaries(params) {
   const res = await request.get('/system/dictionary', {
     params
   });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -18,7 +18,7 @@ export async function listDictionaries(params) {
  */
 export async function addDictionary(data) {
   const res = await request.post('/system/dictionary', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -29,7 +29,7 @@ export async function addDictionary(data) {
  */
 export async function updateDictionary(data) {
   const res = await request.put('/system/dictionary', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -40,7 +40,7 @@ export async function updateDictionary(data) {
  */
 export async function removeDictionary(id) {
   const res = await request.delete('/system/dictionary/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

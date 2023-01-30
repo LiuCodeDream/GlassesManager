@@ -7,7 +7,7 @@ export async function getPayNumList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/analysis-pay-num.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -20,7 +20,7 @@ export async function getSaleroomList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/analysis-saleroom.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -34,7 +34,7 @@ export async function getVisitHourList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/analysis-visits.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -47,7 +47,7 @@ export async function getWordCloudList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/analysis-hot-search.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));

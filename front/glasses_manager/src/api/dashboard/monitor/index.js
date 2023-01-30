@@ -21,7 +21,7 @@ export async function getUserCountList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/monitor-user-count.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -34,7 +34,7 @@ export async function getBrowserCountList() {
   const res = await request.get(
     'https://cdn.eleadmin.com/20200610/monitor-browser-count.json'
   );
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));

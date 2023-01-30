@@ -7,7 +7,7 @@ export async function listMenus(params) {
   const res = await request.get('/system/menu', {
     params
   });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -18,7 +18,7 @@ export async function listMenus(params) {
  */
 export async function addMenu(data) {
   const res = await request.post('/system/menu', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -29,7 +29,7 @@ export async function addMenu(data) {
  */
 export async function updateMenu(data) {
   const res = await request.put('/system/menu', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -40,7 +40,7 @@ export async function updateMenu(data) {
  */
 export async function removeMenu(id) {
   const res = await request.delete('/system/menu/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

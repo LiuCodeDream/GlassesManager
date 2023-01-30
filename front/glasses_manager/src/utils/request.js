@@ -5,9 +5,10 @@ import axios from 'axios';
 import { unref } from 'vue';
 import router from '@/router';
 import { Modal } from 'ant-design-vue/es';
-import { API_BASE_URL, TOKEN_HEADER_NAME, LAYOUT_PATH } from '@/config/setting';
-import { getToken, setToken } from './token-util';
+import { API_BASE_URL, TOKEN_HEADER_NAME, LAYOUT_PATH, TOKEN_RHEADER_NAME, RES_RTOKEN_NAME } from '@/config/setting';
+import { getRefreshToken, getToken, setRefreshToken, setToken } from './token-util';
 import { logout } from './page-tab-util';
+import { message } from 'ant-design-vue';
 
 const service = axios.create({
   baseURL: API_BASE_URL
@@ -20,8 +21,10 @@ service.interceptors.request.use(
   (config) => {
     // 添加 token 到 header
     const token = getToken();
+    const rToken = getRefreshToken();
     if (token && config.headers) {
       config.headers.common[TOKEN_HEADER_NAME] = token;
+      config.headers.common[TOKEN_RHEADER_NAME] = rToken;
     }
     return config;
   },
@@ -35,6 +38,7 @@ service.interceptors.request.use(
  */
 service.interceptors.response.use(
   (res) => {
+
     // 登录过期处理
     if (res.data?.code === 401) {
       const currentPath = unref(router.currentRoute).path;
@@ -53,10 +57,30 @@ service.interceptors.response.use(
       }
       return Promise.reject(new Error(res.data.message));
     }
+    // 服务器异常
+    else if(res.data?.code === 500) {
+      Modal.destroyAll();
+      var modal = Modal.error({
+        title: '系统提示',
+        content: `服务器异常：${res.data?.message}`,
+        okText: '确定',
+        onOk: () =>  {
+          modal.destroy();
+        }
+      });
+      return Promise.reject(new Error(res.data.message));
+    }
+    
     // token 自动续期
     const token = res.headers[TOKEN_HEADER_NAME.toLowerCase()];
     if (token) {
       setToken(token);
+    }
+    // 刷新token 自动续期
+    debugger
+    const refresh_token = res.headers[RES_RTOKEN_NAME.toLocaleLowerCase()];
+    if(refresh_token) {
+      setRefreshToken(refresh_token);
     }
     return res;
   },

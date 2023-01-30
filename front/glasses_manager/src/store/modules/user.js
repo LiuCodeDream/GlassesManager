@@ -17,7 +17,11 @@ export const useUserStore = defineStore({
     // 当前登录用户的权限
     authorities: [],
     // 当前登录用户的角色
-    roles: []
+    roles: [],
+    // 访问数据域
+    dataScopes: [],
+    // 可访问的系统应用
+    apps: [],
   }),
   getters: {},
   actions: {
@@ -25,10 +29,12 @@ export const useUserStore = defineStore({
      * 请求用户信息、权限、角色、菜单
      */
     async fetchUserInfo() {
+      debugger
       const result = await getUserInfo().catch(() => {});
       if (!result) {
         return {};
       }
+      debugger
       // 用户信息
       this.info = result;
       // 用户权限
@@ -42,7 +48,7 @@ export const useUserStore = defineStore({
       const { menus, homePath } = formatMenus(
         USER_MENUS ??
           toTreeData({
-            data: result.authorities?.filter((d) => d.menuType !== 1),
+            data: result.permissions?.filter((d) => d.menuType !== 1),
             idField: 'menuId',
             parentIdField: 'parentId'
           }).concat(EXTRA_MENUS)

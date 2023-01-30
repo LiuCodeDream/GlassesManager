@@ -5,7 +5,7 @@ import request from '@/utils/request';
  */
 export async function pageUserFiles(params) {
   const res = await request.get('/system/user-file/page', { params });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -18,7 +18,7 @@ export async function listUserFiles(params) {
   const res = await request.get('/system/user-file', {
     params
   });
-  if (res.data.code === 0 && res.data.data) {
+  if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
   return Promise.reject(new Error(res.data.message));
@@ -29,7 +29,7 @@ export async function listUserFiles(params) {
  */
 export async function addUserFile(data) {
   const res = await request.post('/system/user-file', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -40,7 +40,7 @@ export async function addUserFile(data) {
  */
 export async function updateUserFile(data) {
   const res = await request.put('/system/user-file', data);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -51,7 +51,7 @@ export async function updateUserFile(data) {
  */
 export async function removeUserFile(id) {
   const res = await request.delete('/system/user-file/' + id);
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));
@@ -62,7 +62,7 @@ export async function removeUserFile(id) {
  */
 export async function removeUserFiles(data) {
   const res = await request.delete('/system/user-file/batch', { data });
-  if (res.data.code === 0) {
+  if (res.data.code === 200) {
     return res.data.message;
   }
   return Promise.reject(new Error(res.data.message));

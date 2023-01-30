@@ -48,6 +48,15 @@ export const TOKEN_HEADER_NAME = 'Authorization';
 // token 存储的名称
 export const TOKEN_STORE_NAME = 'access_token';
 
+// 刷新token 传递的 header 名称
+export const TOKEN_RHEADER_NAME = 'X-Authorization';
+
+// 刷新token 存储的名称
+export const TOKEN_RSTORE_NAME = 'x_access_token';
+
+// 服务端返回刷新tokne 的 header 名称
+export const RES_RTOKEN_NAME = 'x-access-token';
+
 // 主题配置存储的名称
 export const THEME_STORE_NAME = 'theme';
 
