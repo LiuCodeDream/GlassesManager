@@ -10,7 +10,7 @@ export async function listDictionaries(params) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -21,7 +21,7 @@ export async function addDictionary(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -32,7 +32,7 @@ export async function updateDictionary(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -43,5 +43,5 @@ export async function removeDictionary(id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

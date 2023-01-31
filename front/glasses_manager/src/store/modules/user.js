@@ -12,6 +12,8 @@ export const useUserStore = defineStore({
   state: () => ({
     // 当前登录用户的信息
     info: null,
+    // 所有应用的菜单
+    allMenus: [],
     // 当前登录用户的菜单
     menus: null,
     // 当前登录用户的权限
@@ -22,6 +24,7 @@ export const useUserStore = defineStore({
     dataScopes: [],
     // 可访问的系统应用
     apps: [],
+    selectedApp: null
   }),
   getters: {},
   actions: {
@@ -29,28 +32,30 @@ export const useUserStore = defineStore({
      * 请求用户信息、权限、角色、菜单
      */
     async fetchUserInfo() {
-      debugger
       const result = await getUserInfo().catch(() => {});
       if (!result) {
         return {};
       }
-      debugger
       // 用户信息
-      this.info = result;
+      this.info = result.loginEmpInfo;
+      // 系统应用
+      this.apps = result.apps;
+      let activeApp = this.apps.filter(a => a.active == 'Y');
+      if(activeApp && activeApp.length > 0) {
+        this.selectedApp = activeApp[0];
+      }
       // 用户权限
-      this.authorities =
-        result.authorities
-          ?.filter((d) => !!d.authority)
-          ?.map((d) => d.authority) ?? [];
+      this.authorities = result.permissions ?? [];
       // 用户角色
-      this.roles = result.roles?.map((d) => d.roleCode) ?? [];
+      this.roles = result.roles ?? [];
+      this.allMenus = result.menus;
       // 用户菜单, 过滤掉按钮类型并转为 children 形式
       const { menus, homePath } = formatMenus(
         USER_MENUS ??
           toTreeData({
-            data: result.permissions?.filter((d) => d.menuType !== 1),
-            idField: 'menuId',
-            parentIdField: 'parentId'
+            data: result.menus.filter((d) => d.menuType !== 2 && d.application === this.selectedApp.code), // 过滤按钮菜单
+            idField: 'id',
+            parentIdField: 'pid'
           }).concat(EXTRA_MENUS)
       );
       this.menus = menus;

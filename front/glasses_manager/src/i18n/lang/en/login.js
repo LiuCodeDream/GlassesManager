@@ -1,6 +1,6 @@
 /* 登录界面 */
 export default {
-  title: 'User Login',
+  title: 'Login Please',
   username: 'please input username',
   password: 'please input password',
   code: 'please input code',

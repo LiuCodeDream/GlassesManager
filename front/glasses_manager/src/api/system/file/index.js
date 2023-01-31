@@ -10,7 +10,7 @@ export async function uploadFile(file) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -28,7 +28,7 @@ export async function uploadBase64File(base64, fileName) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -39,7 +39,7 @@ export async function pageFiles(params) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -50,7 +50,7 @@ export async function removeFile(id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -63,5 +63,5 @@ export async function removeFiles(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

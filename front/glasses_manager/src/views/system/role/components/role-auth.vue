@@ -76,8 +76,8 @@
             icon: undefined,
             menuIcon: d.icon
           })),
-          idField: 'menuId',
-          parentIdField: 'parentId',
+          idField: 'id',
+          parentIdField: 'pid',
           addParentIds: true,
           parentIds: []
         });

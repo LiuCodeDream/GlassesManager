@@ -6,6 +6,8 @@
     :side-nav-collapse="sideNavCollapse"
     :body-fullscreen="bodyFullscreen"
     :show-tabs="showTabs"
+    :show-breadcrumb="false"
+    :show-refresh="false"
     :show-footer="showFooter"
     :head-style="headStyle"
     :side-style="sideStyle"
@@ -50,6 +52,12 @@
     <template #logo>
       <img src="/src/assets/logo.svg" alt="logo" />
     </template>
+    <!-- 顶栏左侧区域 -->
+    <template #left>
+      <a-tabs v-model:activeKey="selectedApp.code" @change="onSelectedAppChange">
+        <a-tab-pane v-for="item in apps" :key="item.code" :tab="item.name" />
+      </a-tabs>
+    </template>
     <!-- 顶栏右侧区域 -->
     <template #right>
       <header-tools :fullscreen="fullscreen" @fullscreen="onFullscreen" />
@@ -81,7 +89,7 @@
   import { storeToRefs } from 'pinia';
   import { useI18n } from 'vue-i18n';
   import { message } from 'ant-design-vue/es';
-  import { toggleFullscreen, isFullscreen } from 'ele-admin-pro/es';
+  import { toggleFullscreen, isFullscreen, formatMenus, toTreeData } from 'ele-admin-pro/es';
   import { useUserStore } from '@/store/modules/user';
   import { useThemeStore } from '@/store/modules/theme';
   import RouterLayout from '@/components/RouterLayout/index.vue';
@@ -120,8 +128,17 @@
   // 是否全屏
   const fullscreen = ref(false);
 
-  // 菜单数据
-  const { menus } = storeToRefs(userStore);
+  // 菜单数据 应用数据
+  var { menus, apps, selectedApp, allMenus } = storeToRefs(userStore);
+  
+  var onSelectedAppChange = (activeKey) => {
+    debugger
+    menus.value = toTreeData({
+      data: allMenus.value.filter((d) => d.menuType !== 2 && d.application === activeKey), // 过滤按钮菜单
+      idField: 'id',
+      parentIdField: 'pid'
+    });
+  } 
 
   // 布局风格
   const {

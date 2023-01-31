@@ -10,7 +10,7 @@ export default {
     website: '官網',
     document: '檔案',
     authorization: '授權',
-    copyright: 'Copyright © 2022 武漢易雲智科技有限公司'
+    copyright: `Copyright © ${new Date().getFullYear()} 翔基軟件工作室 All Rights Reserved`
   },
   logout: {
     title: '詢問',

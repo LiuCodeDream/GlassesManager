@@ -10,7 +10,7 @@ export async function getPayNumList() {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -23,7 +23,7 @@ export async function getSaleroomList() {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -37,7 +37,7 @@ export async function getVisitHourList() {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -50,5 +50,5 @@ export async function getWordCloudList() {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

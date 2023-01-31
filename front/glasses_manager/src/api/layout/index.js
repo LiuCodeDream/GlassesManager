@@ -5,11 +5,10 @@ import request from '@/utils/request';
  */
 export async function getUserInfo() {
   const res = await request.get('/getLoginUser');
-  debugger
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -20,7 +19,7 @@ export async function updatePassword(data) {
   if (res.data.code === 200) {
     return res.data.message ?? '修改成功';
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**

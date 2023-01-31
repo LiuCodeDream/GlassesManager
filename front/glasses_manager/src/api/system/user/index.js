@@ -8,7 +8,7 @@ export async function pageUsers(params) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -21,7 +21,7 @@ export async function listUsers(params) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -32,7 +32,7 @@ export async function getUser(id) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -43,7 +43,7 @@ export async function addUser(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -54,7 +54,7 @@ export async function updateUser(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -65,7 +65,7 @@ export async function removeUser(id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -78,7 +78,7 @@ export async function removeUsers(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -92,7 +92,7 @@ export async function updateUserStatus(userId, status) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -106,7 +106,7 @@ export async function updateUserPassword(userId, password = '123456') {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -119,7 +119,7 @@ export async function importUsers(file) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -132,5 +132,5 @@ export async function checkExistence(field, value, id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

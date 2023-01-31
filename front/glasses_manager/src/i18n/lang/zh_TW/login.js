@@ -1,6 +1,6 @@
 /* 登录界面 */
 export default {
-  title: '用戶登錄',
+  title: '歡迎登錄',
   username: '請輸入登入帳號',
   password: '請輸入登入密碼',
   code: '請輸入驗證碼',

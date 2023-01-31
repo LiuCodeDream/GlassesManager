@@ -10,7 +10,7 @@ export default {
     website: 'Website',
     document: 'Document',
     authorization: 'Authorization',
-    copyright: 'Copyright © 2021 Wuhan EClouds Technology Co., Ltd'
+    copyright: `Copyright © ${new Date().getFullYear()} Xiangji Software Studio All Rights Reserved`
   },
   logout: {
     title: 'Confirm',

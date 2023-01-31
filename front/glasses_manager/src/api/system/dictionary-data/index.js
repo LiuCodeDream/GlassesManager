@@ -8,7 +8,7 @@ export async function pageDictionaryData(params) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -19,7 +19,7 @@ export async function listDictionaryData(params) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -30,7 +30,7 @@ export async function addDictionaryData(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -41,7 +41,7 @@ export async function updateDictionaryData(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -52,7 +52,7 @@ export async function removeDictionaryData(id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -63,5 +63,5 @@ export async function removeDictionaryDataBatch(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

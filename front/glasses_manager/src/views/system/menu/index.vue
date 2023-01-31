@@ -197,8 +197,8 @@
       data: data.map((d) => {
         return { ...d, key: d.menuId, value: d.menuId };
       }),
-      idField: 'menuId',
-      parentIdField: 'parentId'
+      idField: 'id',
+      parentIdField: 'pid'
     });
   };
 

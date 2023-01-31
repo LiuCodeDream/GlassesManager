@@ -10,7 +10,7 @@ export default {
     website: '官网',
     document: '文档',
     authorization: '授权',
-    copyright: 'Copyright © 2022 武汉易云智科技有限公司'
+    copyright: `Copyright © ${new Date().getFullYear()} 翔基软件工作室 All Rights Reserved`
   },
   logout: {
     title: '提示',

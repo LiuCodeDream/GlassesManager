@@ -8,7 +8,7 @@ export async function pageRoles(params) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -21,7 +21,7 @@ export async function listRoles(params) {
   if (res.data.code === 200 && res.data.data) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -32,7 +32,7 @@ export async function addRole(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -43,7 +43,7 @@ export async function updateRole(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -54,7 +54,7 @@ export async function removeRole(id) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -67,7 +67,7 @@ export async function removeRoles(data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -78,7 +78,7 @@ export async function listRoleMenus(roleId) {
   if (res.data.code === 200) {
     return res.data.data;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }
 
 /**
@@ -89,5 +89,5 @@ export async function updateRoleMenus(roleId, data) {
   if (res.data.code === 200) {
     return res.data.message;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(res.data.message);
 }

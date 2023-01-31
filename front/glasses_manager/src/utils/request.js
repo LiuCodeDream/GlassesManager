@@ -55,21 +55,21 @@ service.interceptors.response.use(
           }
         });
       }
-      return Promise.reject(new Error(res.data.message));
+      return Promise.reject(res.data.message);
     }
     // 服务器异常
-    else if(res.data?.code === 500) {
-      Modal.destroyAll();
-      var modal = Modal.error({
-        title: '系统提示',
-        content: `服务器异常：${res.data?.message}`,
-        okText: '确定',
-        onOk: () =>  {
-          modal.destroy();
-        }
-      });
-      return Promise.reject(new Error(res.data.message));
-    }
+    // else if(res.data?.code === 500) {
+    //   Modal.destroyAll();
+    //   var modal = Modal.error({
+    //     title: '系统提示',
+    //     content: `服务器异常：${res.data?.message}`,
+    //     okText: '确定',
+    //     onOk: () =>  {
+    //       modal.destroy();
+    //     }
+    //   });
+    //   return Promise.reject(res.data.message);
+    // }
     
     // token 自动续期
     const token = res.headers[TOKEN_HEADER_NAME.toLowerCase()];
@@ -77,7 +77,6 @@ service.interceptors.response.use(
       setToken(token);
     }
     // 刷新token 自动续期
-    debugger
     const refresh_token = res.headers[RES_RTOKEN_NAME.toLocaleLowerCase()];
     if(refresh_token) {
       setRefreshToken(refresh_token);
