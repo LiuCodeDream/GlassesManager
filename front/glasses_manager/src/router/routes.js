@@ -10,11 +10,13 @@ const modules = import.meta.glob('/src/views/**/index.vue');
 export const routes = [
   {
     path: '/login',
+    name: 'login',
     component: () => import('@/views/login/index.vue'),
     meta: { title: '登录' }
   },
   {
     path: '/forget',
+    name: 'forget',
     component: () => import('@/views/forget/index.vue'),
     meta: { title: '忘记密码' }
   },

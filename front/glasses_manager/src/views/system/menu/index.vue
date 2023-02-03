@@ -107,14 +107,15 @@
     },
     {
       title: '菜单名称',
-      key: 'title',
+      key: 'name',
+      dataIndex: 'name',
       sorter: true,
       showSorterTooltip: false,
       ellipsis: true
     },
     {
       title: '路由地址',
-      dataIndex: 'path',
+      dataIndex: 'router',
       sorter: true,
       showSorterTooltip: false,
       ellipsis: true
@@ -127,32 +128,27 @@
       ellipsis: true
     },
     {
-      title: '权限标识',
-      dataIndex: 'authority',
-      sorter: true,
-      showSorterTooltip: false,
-      ellipsis: true
-    },
-    {
       title: '排序',
-      dataIndex: 'sortNumber',
+      dataIndex: 'sort',
       sorter: true,
       showSorterTooltip: false,
       width: 90
     },
     {
       title: '可见',
-      dataIndex: 'hide',
+      dataIndex: 'visible',
       sorter: true,
       showSorterTooltip: false,
-      customRender: ({ text }) => ['是', '否'][text],
+      customRender: ({ text }) => text === 'Y' ? '是' : '否',
       width: 90
     },
     {
       title: '类型',
-      key: 'menuType',
+      key: 'type',
+      dataIndex: 'type',
       sorter: true,
       showSorterTooltip: false,
+      customRender: ({text}) => ['目录','菜单','按钮'][parseInt(text)],
       width: 90
     },
     {
@@ -195,7 +191,7 @@
   const parseData = (data) => {
     return toTreeData({
       data: data.map((d) => {
-        return { ...d, key: d.menuId, value: d.menuId };
+        return { ...d, key: d.id, value: d.id };
       }),
       idField: 'id',
       parentIdField: 'pid'

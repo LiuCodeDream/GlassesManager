@@ -43,9 +43,9 @@ router.beforeEach(async (to, from) => {
   // 注册动态路由
   const userStore = useUserStore();
   if (!userStore.menus) {
-    const { menus, homePath } = await userStore.fetchUserInfo();
-    if (menus) {
-      router.addRoute(getMenuRoutes(menus, homePath));
+    const { menus, homePath, allMenus } = await userStore.fetchUserInfo();
+    if (allMenus) {
+      router.addRoute(getMenuRoutes(allMenus, homePath));
       return { ...to, replace: true };
     }
   }

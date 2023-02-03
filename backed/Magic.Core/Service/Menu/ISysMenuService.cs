@@ -12,7 +12,7 @@ public interface ISysMenuService
     Task<List<AntDesignTreeNode>> GetLoginMenusAntDesign(long userId, string appCode);
     Task<List<string>> GetLoginPermissionList(long userId);
     Task<dynamic> GetMenu(QueryMenuInput input);
-    Task<dynamic> GetMenuList([FromQuery] MenuInput input);
+    Task<List<MenuOutput>> GetMenuList([FromQuery] MenuInput input);
     Task<dynamic> GetMenuTree([FromQuery] MenuInput input);
     Task<List<string>> GetUserMenuAppCodeList(long userId);
     Task<bool> HasMenu(string appCode);

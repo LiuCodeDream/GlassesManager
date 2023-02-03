@@ -169,7 +169,7 @@ public class SysMenuService : ISysMenuService, IDynamicApiController, ITransient
     /// <param name="input"></param>
     /// <returns></returns>
     [HttpGet("/sysMenu/list")]
-    public async Task<dynamic> GetMenuList([FromQuery] MenuInput input)
+    public async Task<List<MenuOutput>> GetMenuList([FromQuery] MenuInput input)
     {
         var menus = await _sysMenuRep.AsQueryable()
              .WhereIF(!string.IsNullOrWhiteSpace(input.Application), u => u.Application == input.Application.Trim())
@@ -177,7 +177,8 @@ public class SysMenuService : ISysMenuService, IDynamicApiController, ITransient
              .Where(u => u.Status == (int)CommonStatus.ENABLE).OrderBy(u => u.Sort)
              .Select<MenuOutput>()
              .ToListAsync();
-        return new TreeBuildUtil<MenuOutput>().DoTreeBuild(menus);
+        //return new TreeBuildUtil<MenuOutput>().DoTreeBuild(menus);
+        return menus;
     }
 
     /// <summary>

@@ -59,7 +59,7 @@ export const useUserStore = defineStore({
           }).concat(EXTRA_MENUS)
       );
       this.menus = menus;
-      return { menus, homePath };
+      return { menus, homePath, allMenus: this.allMenus };
     },
     /**
      * 更新用户信息

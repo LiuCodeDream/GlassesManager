@@ -4,7 +4,7 @@ import request from '@/utils/request';
  * 查询菜单列表
  */
 export async function listMenus(params) {
-  const res = await request.get('/system/menu', {
+  const res = await request.get('/sysMenu/list', {
     params
   });
   if (res.data.code === 200) {

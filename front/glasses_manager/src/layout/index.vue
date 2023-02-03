@@ -54,7 +54,7 @@
     </template>
     <!-- 顶栏左侧区域 -->
     <template #left>
-      <a-tabs v-model:activeKey="selectedApp.code" @change="onSelectedAppChange">
+      <a-tabs @change="onSelectedAppChange">
         <a-tab-pane v-for="item in apps" :key="item.code" :tab="item.name" />
       </a-tabs>
     </template>
@@ -114,8 +114,10 @@
     removeRightPageTab,
     removeOtherPageTab,
     reloadPageTab,
-    setHomeComponents
+    setHomeComponents,
+    cleanPageTabs
   } from '@/utils/page-tab-util';
+  import router from '@/router/index';
 
   const { push } = useRouter();
   const { t, locale } = useI18n();
@@ -132,14 +134,29 @@
   var { menus, apps, selectedApp, allMenus } = storeToRefs(userStore);
   
   var onSelectedAppChange = (activeKey) => {
-    debugger
-    menus.value = toTreeData({
+    var { menus:fMenus, homePath } = formatMenus(toTreeData({
       data: allMenus.value.filter((d) => d.menuType !== 2 && d.application === activeKey), // 过滤按钮菜单
       idField: 'id',
       parentIdField: 'pid'
-    });
+    }))
+    cleanPageTabs();
+    onRegisterMenus(menus, homePath);
+    menus.value = fMenus;
+    let activate = apps.value.filter(a => a.code === activeKey);
+    if(activate.length) {
+      selectedApp.value = activate[0];
+    }
   } 
-
+  var onRegisterMenus = (menus, homePath) => {
+    let removeRouters = router.getRoutes()
+      .filter(r => r.name !== 'login' && r.name !== 'forget' && r.name !== undefined)
+      .map(r => r.name);
+    removeRouters.forEach(r => {
+      router.removeRoute(r);
+    });
+    router.addRoute(getMenuRoutes(menus, homePath));
+    router.push(homePath);
+  }
   // 布局风格
   const {
     tabs,
@@ -248,6 +265,7 @@
 
 <script>
   import * as MenuIcons from './menu-icons';
+import { getMenuRoutes } from '@/router/routes';
 
   export default {
     name: 'EleLayout',
